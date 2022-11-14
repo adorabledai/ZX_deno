@@ -1,7 +1,7 @@
-import React from 'react'
-import LockableSlider from '../container/LockableSlider'
-import LinkIcon from '@mui/icons-material/Link'
-export default function setting_bar(params) {
+import React from 'react';
+import LockableSlider from '../container/LockableSlider';
+import LinkIcon from '@mui/icons-material/Link';
+export default function Setting_bar(params) {
     return (
         <>
             <LockableSlider />
@@ -12,5 +12,5 @@ export default function setting_bar(params) {
                 </a>
             </h5>
         </>
-    )
+    );
 }

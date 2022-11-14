@@ -1,22 +1,22 @@
-import * as React from 'react'
-import Popover from '@mui/material/Popover'
-import IconButton from '@mui/material/IconButton'
-import Tooltip from '@mui/material/Tooltip'
-import FilterListIcon from '@mui/icons-material/FilterList'
-import FilterList from './FilterList'
-export default function BasicPopover() {
-    const [anchorEl, setAnchorEl] = React.useState(null)
+import * as React from 'react';
+import Popover from '@mui/material/Popover';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import FilterListIcon from '@mui/icons-material/FilterList';
+import FilterList from './FilterList';
+function BasicPopover() {
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
-        setAnchorEl(event.currentTarget)
-    }
+        setAnchorEl(event.currentTarget);
+    };
 
     const handleClose = () => {
-        setAnchorEl(null)
-    }
+        setAnchorEl(null);
+    };
 
-    const open = Boolean(anchorEl)
-    const id = open ? 'simple-popover' : undefined
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popover' : undefined;
 
     return (
         <div>
@@ -39,5 +39,6 @@ export default function BasicPopover() {
                 <FilterList />
             </Popover>
         </div>
-    )
+    );
 }
+export default BasicPopover;

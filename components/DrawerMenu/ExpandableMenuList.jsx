@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react'
-import ListSubheader from '@mui/material/ListSubheader'
-import List from '@mui/material/List'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
-import Collapse from '@mui/material/Collapse'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import DraftsIcon from '@mui/icons-material/Drafts'
-import ExpandLess from '@mui/icons-material/ExpandLess'
-import ExpandMore from '@mui/icons-material/ExpandMore'
-import StarBorder from '@mui/icons-material/StarBorder'
-import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react';
+import ListSubheader from '@mui/material/ListSubheader';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+import { useRouter } from 'next/router';
 export default function NestedList({ open }) {
-    const route = useRouter()
-    const [expand, setExpand] = useState(false)
+    const route = useRouter();
+    const [expand, setExpand] = useState(false);
     useEffect(() => {
-        setExpand(open)
-    }, [open])
+        setExpand(open);
+    }, [open]);
     const handleClick = () => {
-        open && setExpand(!expand)
-    }
+        open && setExpand(!expand);
+    };
 
     return (
         <List
@@ -49,7 +49,7 @@ export default function NestedList({ open }) {
             </ListItemButton>
             <Collapse in={expand} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }} onClick={() => route.push('/setting-table')}>
+                    <ListItemButton sx={{ pl: 4 }} onClick={() => route.push('/setting_table')}>
                         <ListItemIcon>
                             <StarBorder />
                         </ListItemIcon>
@@ -58,5 +58,5 @@ export default function NestedList({ open }) {
                 </List>
             </Collapse>
         </List>
-    )
+    );
 }

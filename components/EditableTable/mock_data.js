@@ -5,10 +5,10 @@ function createData(name, calories, fat, carbs, protein) {
         fat,
         carbs,
         protein,
-    }
+    };
 }
 
-export default [
+const data = [
     createData('Cupcake', 305, 3.7, 67, 4.3),
     createData('Donut', 452, 25.0, 51, 4.9),
     createData('Eclair', 262, 16.0, 24, 6.0),
@@ -22,10 +22,9 @@ export default [
     createData('Marshmallow', 318, 0, 81, 2.0),
     createData('Nougat', 360, 19.0, 9, 37.0),
     createData('Oreo', 437, 18.0, 63, 4.0),
-]
+];
 
-
- const data = [
+const dataColumn = [
     {
         id: 'name',
         numeric: false,
@@ -56,8 +55,9 @@ export default [
         disablePadding: false,
         label: 'Protein (g)',
     },
-]
-function addKey(rowData){
-    return rowData.map((d,index)=>({...d, key:index}))
+];
+function addKey(rowData) {
+    return rowData.map((d, index) => ({ ...d, key: index }));
 }
-export const headCells = addKey(data)
+export default data;
+export const headCells = addKey(dataColumn);

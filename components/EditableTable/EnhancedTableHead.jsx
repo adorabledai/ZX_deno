@@ -1,20 +1,20 @@
-import React, { useState, useContext, useEffect } from 'react'
-import TableHead from '@mui/material/TableHead'
-import TableRow from '@mui/material/TableRow'
-import TableSortLabel from '@mui/material/TableSortLabel'
-import TableCell from '@mui/material/TableCell'
-import Checkbox from '@mui/material/Checkbox'
-import Box from '@mui/material/Box'
-import { visuallyHidden } from '@mui/utils'
-import { headCells } from './mock_data'
-import { FilterContext } from '../../contexts/filter.context.js'
+import React, { useContext, useEffect } from 'react';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import TableSortLabel from '@mui/material/TableSortLabel';
+import TableCell from '@mui/material/TableCell';
+import Checkbox from '@mui/material/Checkbox';
+import Box from '@mui/material/Box';
+import { visuallyHidden } from '@mui/utils';
+
+import { FilterContext } from '../../contexts/filter.context.js';
 function EnhancedTableHead(props) {
-    const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } = props
+    const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } = props;
     const createSortHandler = (property) => (event) => {
-        onRequestSort(event, property)
-    }
-    const { list } = useContext(FilterContext)
-    useEffect(() => {}, [list])
+        onRequestSort(event, property);
+    };
+    const { list } = useContext(FilterContext);
+    useEffect(() => {}, [list]);
     return (
         <TableHead>
             <TableRow>
@@ -52,10 +52,10 @@ function EnhancedTableHead(props) {
                                 ) : null}
                             </TableSortLabel>
                         </TableCell>
-                    )
+                    );
                 })}
             </TableRow>
         </TableHead>
-    )
+    );
 }
-export default EnhancedTableHead
+export default EnhancedTableHead;

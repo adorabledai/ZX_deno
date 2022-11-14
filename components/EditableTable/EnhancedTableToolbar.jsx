@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { alpha } from '@mui/material/styles';
 import { Toolbar, Tooltip, Typography } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import FilterPopup from './FilterPopup';
-export default function EnhancedTableToolbar(props) {
+function EnhancedTableToolbar(props) {
     const { numSelected, removeHandler } = props;
 
     return (
@@ -50,3 +50,4 @@ export default function EnhancedTableToolbar(props) {
         </Toolbar>
     );
 }
+export default EnhancedTableToolbar;

@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Tooltip from '@mui/material/Tooltip'
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import Tooltip from '@mui/material/Tooltip';
+import Image from 'next/image';
 export default function Home() {
     useEffect(() => {
         if (window !== undefined) {
-            console.log(!!window && window.matchMedia('(prefers-color-scheme: dark)'))
-            setF(() => window.open)
+            console.log(!!window && window.matchMedia('(prefers-color-scheme: dark)'));
+            setF(() => window.open);
         }
-    }, [])
-    const [f, setF] = useState()
+    }, []);
+    const [f, setF] = useState();
     return (
         <div className={styles.container}>
             <Head>
@@ -23,10 +24,10 @@ export default function Home() {
                     style={{ display: 'block', textAlign: 'center' }}
                     // href="https://mui.com/material-ui/react-autocomplete/"
                     onClick={() => {
-                        f('https://mui.com/material-ui/react-autocomplete/')
+                        f('https://mui.com/material-ui/react-autocomplete/');
                     }}
                 >
-                    <img src="./192x192.png" alt="Material UI" width="200" height="200"></img>
+                    <Image src="./192x192.png" alt="Material UI" width="200" height="200"></Image>
                 </a>
             </Tooltip>
             <footer className={styles.footer}>
@@ -35,5 +36,5 @@ export default function Home() {
                 </a>
             </footer>
         </div>
-    )
+    );
 }
