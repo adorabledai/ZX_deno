@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Tooltip from '@mui/material/Tooltip';
 import Image from 'next/image';
+import MUILogo from '../public/mui.png';
 export default function Home() {
     useEffect(() => {
         if (window !== undefined) {
@@ -27,7 +28,7 @@ export default function Home() {
                         f('https://mui.com/material-ui/react-autocomplete/');
                     }}
                 >
-                    <Image src="./192x192.png" alt="Material UI" width="200" height="200"></Image>
+                    <Image src={MUILogo} alt="Material UI" width="200" height="200"></Image>
                 </a>
             </Tooltip>
             <footer className={styles.footer}>
